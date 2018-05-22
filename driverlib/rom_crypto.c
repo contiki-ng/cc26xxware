@@ -195,16 +195,16 @@ ECC_initialize(uint32_t *pWorkzone)
 }
 
 typedef uint8_t(*ecc_keygen_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *);
-ecc_keygen_t ecc_generatekey = (ecc_keygen_t)(0x10017dbd);
+static ecc_keygen_t ecc_generatekey = (ecc_keygen_t)(0x10017dbd);
 
 typedef uint8_t(*ecdsa_sign_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
-ecdsa_sign_t ecc_ecdsa_sign = (ecdsa_sign_t)(0x10017969);
+static ecdsa_sign_t ecc_ecdsa_sign = (ecdsa_sign_t)(0x10017969);
 
 typedef uint8_t(*ecdsa_verify_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
-ecdsa_verify_t ecc_ecdsa_verify = (ecdsa_verify_t)(0x10017b01);
+static ecdsa_verify_t ecc_ecdsa_verify = (ecdsa_verify_t)(0x10017b01);
 
 typedef uint8_t(*ecdh_computeSharedSecret_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
-ecdh_computeSharedSecret_t ecdh_computeSharedSecret = (ecdh_computeSharedSecret_t)(0x10017ded);
+static ecdh_computeSharedSecret_t ecdh_computeSharedSecret = (ecdh_computeSharedSecret_t)(0x10017ded);
 
 //*****************************************************************************
 // ECC_generateKey
